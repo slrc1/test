@@ -10,7 +10,7 @@ def index(request):
     fl = list()
     for playlist in sub.playlists:
         fl.append('http://dammikartmp.tulix.tv/slrc1/slrc1/'+playlist.uri)
-    return HttpResponse(str(fl))
+        return HttpResponse(playlist.uri)
     return render(request, 'index.html')
 
 
