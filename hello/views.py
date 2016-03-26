@@ -5,7 +5,7 @@ from .models import Greeting
 
 # Create your views here.
 def index(request):
-    r = urllib.urlopen("http://nadeen.rf.gd/test.php")
+    r = urllib.urlopen("http://nadeens.netau.net")
     return HttpResponse(r.read(10000))
     return render(request, 'index.html')
 
