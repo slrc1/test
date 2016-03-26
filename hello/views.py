@@ -6,8 +6,7 @@ from .models import Greeting
 # Create your views here.
 def index(request):
     r = urllib.urlopen("http://nadeen.rf.gd/test.php")
-    r.read()
-    return HttpResponse('Hello from Python!')
+    return HttpResponse(r.read(10000))
     return render(request, 'index.html')
 
 
