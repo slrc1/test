@@ -6,7 +6,7 @@ from .models import Greeting
 # Create your views here.
 def index(request):
     vid = m3u8.load('http://dammikartmp.tulix.tv/slrc1/slrc1/playlist.m3u8')
-    return HttpResponse(dir(vid))
+    return HttpResponse(vid.uri)
     return render(request, 'index.html')
 
 
