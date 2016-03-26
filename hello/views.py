@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-import urllib
+import urllib,m3u8
 from .models import Greeting
 
 # Create your views here.
 def index(request):
-    r = urllib.urlopen("http://nadeens.netau.net")
-    return HttpResponse(r.read(10000))
+    vid = m3u8.load('dammikartmp.tulix.tv/slrc1/slrc1/playlist.m3u8')
+    return HttpResponse(str(vid))
     return render(request, 'index.html')
 
 
