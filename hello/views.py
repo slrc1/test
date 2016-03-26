@@ -6,7 +6,7 @@ from .models import Greeting
 # Create your views here.
 def index(request):
     vid = m3u8.load('http://dammikartmp.tulix.tv/slrc1/slrc1/playlist.m3u8')
-    sub = m3u8.load('http://dammikartmp.tulix.tv/slrc1/slrc1/'+vid.playlist[0].uri)
+    sub = m3u8.load('http://dammikartmp.tulix.tv/slrc1/slrc1/'+vid.playlists[0].uri)
     fl = list()
     for playlist in sub.playlists:
         fl.append('http://dammikartmp.tulix.tv/slrc1/slrc1/'+playlist.uri)
