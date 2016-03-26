@@ -9,11 +9,11 @@ def index(request):
     fl = list()
     for playlist in vid.playlists:
         if playlist.uri.rstrip().endswith('.m3u8'):
-            sub = m3u8.load('http://dammikartmp.tulix.tv/slrc1/slrc1/'playlist.uri)
+            sub = m3u8.load('http://dammikartmp.tulix.tv/slrc1/slrc1/'+playlist.uri)
             if sub.uri.rstrip().endswith('.ts'):
                 fl.append('http://dammikartmp.tulix.tv/slrc1/slrc1/'+sub.uri)
         elif playlist.uri.rstrip().endswith('.ts'):
-            fl.append('http://dammikartmp.tulix.tv/slrc1/slrc1/'playlist.uri)
+            fl.append('http://dammikartmp.tulix.tv/slrc1/slrc1/'+playlist.uri)
     return HttpResponse(str(fl))
     return render(request, 'index.html')
 
