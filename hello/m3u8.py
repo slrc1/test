@@ -1,4 +1,4 @@
-<?php
+"""<?php
 
 function tv_init()
 {
@@ -52,3 +52,9 @@ header("Content-type: image/png");
 echo("sssszaZg");
 
 ?>
+"""
+
+class TV():
+def __init__():
+return
+
