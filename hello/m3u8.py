@@ -54,7 +54,7 @@ echo("sssszaZg");
 ?>
 """
 
-class TV():
+class tv():
     def __init__():
         t = tv_init();
         return
