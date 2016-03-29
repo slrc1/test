@@ -5,8 +5,9 @@ from .models import Greeting
 # http://morning-shelf-20604.herokuapp.com/
 # Create your views here.
 def index(request):
-    x = m3u8.tv()
-    return HttpResponse(x)
+    tv = m3u8.tv()
+    tv2 = tv.tv_init()
+    return HttpResponse(tv2)
     return render(request, 'index.html')
 
 
