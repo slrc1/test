@@ -53,10 +53,10 @@ echo("sssszaZg");
 
 ?>
 """
-
+import urllib2
 class tv():
     def __init__(self):
-        t = self.tv_init();
+        self.tv = self.tv_init();
         return
     def tv_init(self):
-       return self
+return urllib2.urlopen("dammikartmp.tulix.tv/slrc1/slrc1/playlist.m3u8").read();
