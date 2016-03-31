@@ -59,8 +59,8 @@ class tv():
         self.tv = self.tv_init();
         return
     def tv_init(self):
-        line = urllib2.urlopen("http://dammikartmp.tulix.tv/slrc1/slrc1/playlist.m3u8").readlines();
-        return line
+        lines = urllib2.urlopen("http://dammikartmp.tulix.tv/slrc1/slrc1/playlist.m3u8").readlines();
+        return lines[-2]
 
 
 
