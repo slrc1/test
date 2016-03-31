@@ -60,8 +60,11 @@ class tv():
         return
     def tv_init(self):
         lines = urllib2.urlopen("http://dammikartmp.tulix.tv/slrc1/slrc1/playlist.m3u8").readlines()
-        line = lines[len(lines)-2]
-        return (''.join(lines))
+        line = '#'
+        for lin in lines:
+            if lin[1] != '#':
+                line = lin
+        return line
 
 
 
