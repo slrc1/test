@@ -7,7 +7,8 @@ from .models import Greeting
 def index(request):
     tv = m3u8.tv()
     tv2 = tv.tv_init()
-    return HttpResponse(tv2)
+    tv3 = tv.tv_load(tv2)
+    return HttpResponse(tv3)
     return render(request, 'index.html')
 
 
