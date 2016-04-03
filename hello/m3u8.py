@@ -64,9 +64,9 @@ class tv():
         for lin in lines:
             if lin[1] != '#':
                 line = lin
-        return 'http://dammikartmp.tulix.tv/slrc1/slrc1/'.join(line.split())
+        return ''.join(line.split())
     def tv_load(self,s):
-        lines = urllib2.urlopen(s).readlines()
+        lines = urllib2.urlopen('http://dammikartmp.tulix.tv/slrc1/slrc1/'+s).readlines()
         line = list()
         for lin in lines:
             if lin[1] != '#':
